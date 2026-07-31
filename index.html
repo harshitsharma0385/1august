@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>happy girlfriend's day, my sunflower🌻</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #FFF8EA;
+    --mustard: #E8A233;
+    --mustard-deep: #D6901E;
+    --rust: #B24E1B;
+    --ink: #3E2B1F;
+    --paper: #FFFDF7;
+    --leaf: #6B7B3F;
+    --blush: #F6C9CC;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{ background: var(--cream); }
+
+  body{
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* subtle paper grain across the whole page — the quiet texture behind the one bold move */
+  .grain{
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+  }
+
+  section{
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 70px 24px;
+  }
+
+  /* ================= HERO PANEL — the one loud element ================= */
+  .hero-panel{
+    position: relative;
+    background: var(--mustard);
+    overflow: hidden;
+    padding-bottom: 90px;
+  }
+  .hero-panel .hero-inner{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 90px 24px 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .glass-card{
+    display: inline-block;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 44px 46px;
+    border-radius: 28px;
+    background: rgba(255,253,247,0.16);
+    border: 1px solid rgba(255,253,247,0.35);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 12px 40px -12px rgba(62,43,31,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  @media (max-width: 640px){
+    .glass-card{ padding: 32px 26px; }
+  }
+
+  /* the big stamp — one oversized bloom bleeding off the corner */
+  .stamp{
+    position: absolute;
+    top: -18%;
+    right: -14%;
+    width: 62vw;
+    max-width: 640px;
+    min-width: 380px;
+    opacity: 0.95;
+    z-index: 1;
+    transform: rotate(8deg);
+    animation: stampSway 9s ease-in-out infinite;
+    transform-origin: 60% 40%;
+  }
+  @keyframes stampSway{
+    0%,100%{ transform: rotate(6deg); }
+    50%{ transform: rotate(10deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .stamp{ animation: none; }
+  }
+
+  .wave{
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    width: 100%;
+    height: 90px;
+    z-index: 3;
+    display: block;
+  }
+
+  .eyebrow{
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--paper);
+    letter-spacing: 0.5px;
+  }
+
+  h1.title{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    line-height: 1.05;
+    color: var(--paper);
+    margin: 6px 0 14px;
+    text-shadow: 0 6px 18px rgba(62,43,31,0.18);
+  }
+
+  .hero-sub{
+    font-size: 1.05rem;
+    font-weight: 400;
+    max-width: 460px;
+    margin: 0 auto;
+    color: #FFF1D6;
+  }
+
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 14px;
+    margin: 40px auto 0;
+    color: var(--paper);
+  }
+  .divider .line{
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--paper), transparent);
+    opacity: 0.7;
+  }
+
+  /* ---------- note ---------- */
+  .note-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top: -20px;
+  }
+  .note-card{
+    background: var(--paper);
+    border-radius: 18px;
+    padding: 46px 42px;
+    max-width: 620px;
+    box-shadow: 0 18px 40px -20px rgba(62,43,31,0.35);
+    position: relative;
+    transform: rotate(-0.6deg);
+    border: 1px solid #F0E3C8;
+  }
+  .note-card::before{
+    content: "🌻";
+    position: absolute;
+    top: -22px;
+    left: 32px;
+    font-size: 2.1rem;
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
+  }
+  .note-card::after{
+    content:"";
+    position:absolute;
+    width: 70px; height: 26px;
+    background: rgba(246,201,204,0.55);
+    top: -14px; right: 40px;
+    transform: rotate(6deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .note-heading{
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    color: var(--rust);
+    margin-bottom: 14px;
+  }
+  .note-body{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+  .note-sign{
+    margin-top: 22px;
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: right;
+    color: var(--rust);
+  }
+
+  /* ---------- section titles ---------- */
+  .section-title{
+    text-align:center;
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .section-sub{
+    text-align:center;
+    color:#8a7663;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 44px;
+    letter-spacing: 0.4px;
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    justify-items: center;
+  }
+  .polaroid{
+    background: var(--paper);
+    padding: 14px 14px 42px;
+    box-shadow: 0 14px 26px -14px rgba(62,43,31,0.4);
+    width: 100%;
+    max-width: 220px;
+    border-radius: 4px;
+    position: relative;
+  }
+  .polaroid:nth-child(1){ transform: rotate(-4deg); }
+  .polaroid:nth-child(2){ transform: rotate(3deg); }
+  .polaroid:nth-child(3){ transform: rotate(-2deg); }
+
+  .polaroid-photo{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:2px;
+    display:block;
+    border:2px solid #E4C98F;
+  }
+  .polaroid-photo span.icon{ font-size: 1.4rem; }
+  .polaroid-caption{
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    text-align:center;
+    font-size: 1.15rem;
+    color: var(--rust);
+    margin-top: 12px;
+  }
+  .tape{
+    position:absolute;
+    width: 50px; height: 18px;
+    background: rgba(246,201,204,0.6);
+    top: -9px; left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+  }
+
+  /* ---------- favorites ---------- */
+  .fav-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .fav-card{
+    background: var(--paper);
+    border-radius: 20px;
+    padding: 28px 18px;
+    text-align:center;
+    border: 1px solid #F0E3C8;
+    box-shadow: 0 10px 24px -16px rgba(62,43,31,0.3);
+    transition: transform 0.25s ease;
+  }
+  .fav-card:hover{ transform: translateY(-6px); }
+  .fav-icon{ font-size: 2.1rem; margin-bottom: 10px; display:block; }
+  .fav-title{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .fav-desc{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #8a7663;
+  }
+
+  /* ---------- countdown ---------- */
+  .countdown-wrap{
+    background: linear-gradient(160deg, var(--mustard), var(--mustard-deep));
+    border-radius: 28px;
+    padding: 52px 30px;
+    text-align:center;
+    position: relative;
+    overflow: hidden;
+  }
+  .countdown-label{
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--paper);
+  }
+  .countdown-date{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--paper);
+    margin: 4px 0 30px;
+  }
+  .timer{
+    display:flex;
+    justify-content:center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .timer .unit{
+    background: var(--paper);
+    border-radius: 16px;
+    padding: 18px 20px;
+    min-width: 84px;
+    box-shadow: 0 12px 22px -14px rgba(62,43,31,0.35);
+  }
+  .timer .num{
+    font-family:'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--rust);
+    line-height: 1;
+  }
+  .timer .lbl{
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8a7663;
+    margin-top: 6px;
+  }
+  .countdown-footer-note{
+    margin-top: 26px;
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--paper);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    text-align:center;
+    padding: 50px 24px 70px;
+    font-family:'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--rust);
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 640px){
+    .gallery{ grid-template-columns: 1fr 1fr; }
+    .fav-grid{ grid-template-columns: 1fr; }
+    .note-card{ padding: 34px 24px; }
+    .timer{ gap: 10px; }
+    .timer .unit{ min-width: 68px; padding: 14px 12px; }
+    .timer .num{ font-size: 1.6rem; }
+    .stamp{ width: 80vw; top: -10%; right: -24%; }
+  }
+</style>
+</head>
+<body>
+
+<svg class="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <filter id="paperNoise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <rect width="100%" height="100%" filter="url(#paperNoise)"/>
+</svg>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero-panel">
+  <svg class="stamp" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g fill="var(--paper)">
+      <ellipse cx="100" cy="34" rx="19" ry="34"/>
+      <ellipse cx="100" cy="166" rx="19" ry="34"/>
+      <ellipse cx="34" cy="100" rx="34" ry="19"/>
+      <ellipse cx="166" cy="100" rx="34" ry="19"/>
+      <ellipse cx="53" cy="53" rx="19" ry="34" transform="rotate(45 53 53)"/>
+      <ellipse cx="147" cy="53" rx="19" ry="34" transform="rotate(-45 147 53)"/>
+      <ellipse cx="53" cy="147" rx="19" ry="34" transform="rotate(-45 53 147)"/>
+      <ellipse cx="147" cy="147" rx="19" ry="34" transform="rotate(45 147 147)"/>
+    </g>
+    <circle cx="100" cy="100" r="38" fill="var(--ink)"/>
+    <circle cx="100" cy="100" r="38" fill="url(#seeds)" opacity="0.45"/>
+    <defs>
+      <pattern id="seeds" width="8" height="8" patternUnits="userSpaceOnUse">
+        <circle cx="4" cy="4" r="1.4" fill="#231710"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="glass-card">
+      <p class="eyebrow">happy</p>
+      <h1 class="title">Girlfriend's Day</h1>
+      <p class="hero-sub">a whole page just for my favourite person — full of sunflowers,<br>pasta cravings, and that dreamy look in your eyes I never get tired of.</p>
+      <div class="divider"><span class="line"></span>🌻<span class="line"></span></div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C 220,90 420,0 720,30 C 1020,60 1220,10 1440,45 L1440,90 L0,90 Z" fill="var(--cream)"/>
+  </svg>
+</div>
+
+<!-- ===================== NOTE ===================== -->
+<section class="note-wrap">
+  <div class="note-card">
+    <p class="note-heading">a little note for you,</p>
+    <p class="note-body">
+      Hi you. Yes, you — the one with the dreamiest eyes I've ever gotten lost in.
+      I just wanted to make you something small to say how much you mean to me.
+      You're my favourite person to annoy, my favourite person to talk to about nothing,
+      and somehow still my favourite person after all this time. You're sunshine wrapped
+      in sunflower petals. Happy Girlfriend's Day, my lil baby gurl.
+    </p>
+    <p class="note-sign">— yours, always 🌻</p>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section>
+  <h2 class="section-title">us, in pictures</h2>
+  <p class="section-sub">paste your favourites in the frames below</p>
+  <div class="gallery">
+    <div class="polaroid">
+      <div class="tape"></div>
+      <!-- Replace this div's background with your photo, e.g.
+           style="background-image:url('photo1.jpg'); background-size:cover;" -->
+      <img src="IMG_2302.jpg" alt="Photo 1" class="polaroid-photo">
+      <p class="polaroid-caption">my favourite view</p>
+    </div>
+    <div class="polaroid">
+      <div class="tape"></div>
+      <img src="IMG_2300.JPG" alt="Photo 1" class="polaroid-photo">
+      <p class="polaroid-caption">us, always</p>
+    </div>
+    <div class="polaroid">
+      <div class="tape"></div>
+      <img src="IMG_2301.jpeg" alt="Photo 1" class="polaroid-photo">
+      <p class="polaroid-caption">that smile</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAVOURITES ===================== -->
+<section>
+  <h2 class="section-title">a few of your favourite things</h2>
+  <p class="section-sub">and a few reasons they remind me of you</p>
+  <div class="fav-grid">
+    <div class="fav-card">
+      <span class="fav-icon">🌻</span>
+      <p class="fav-title">Sunflowers</p>
+      <p class="fav-desc">because you're basically one — always turning toward the light</p>
+    </div>
+    <div class="fav-card">
+      <span class="fav-icon">🍜</span>
+      <p class="fav-title">Noodles</p>
+      <p class="fav-desc">your go-to order, every single time, no negotiations</p>
+    </div>
+    <div class="fav-card">
+      <span class="fav-icon">🍝</span>
+      <p class="fav-title">White Sauce Pasta</p>
+      <p class="fav-desc">the one dish that makes your eyes light up before the first bite</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COUNTDOWN ===================== -->
+<section>
+  <div class="countdown-wrap">
+    <p class="countdown-label">counting down to</p>
+    <p class="countdown-date">our next date — August 8th 🌻</p>
+    <div class="timer" id="timer">
+      <div class="unit"><div class="num" id="cd-days">--</div><div class="lbl">days</div></div>
+      <div class="unit"><div class="num" id="cd-hours">--</div><div class="lbl">hours</div></div>
+      <div class="unit"><div class="num" id="cd-mins">--</div><div class="lbl">mins</div></div>
+      <div class="unit"><div class="num" id="cd-secs">--</div><div class="lbl">secs</div></div>
+    </div>
+    <p class="countdown-footer-note" id="cd-message">can't wait to see you 💛</p>
+  </div>
+</section>
+
+<footer>
+  From Harshit to Arushi🌻
+</footer>
+
+<script>
+  // ---- countdown to Aug 8 (next occurrence) ----
+  function getNextAug8(){
+    const now = new Date();
+    let year = now.getFullYear();
+    let target = new Date(year, 7, 8, 0, 0, 0); // month 7 = August
+    if(target < now){
+      target = new Date(year + 1, 7, 8, 0, 0, 0);
+    }
+    return target;
+  }
+
+  const targetDate = getNextAug8();
+
+  function updateTimer(){
+    const now = new Date();
+    let diff = targetDate - now;
+
+    if(diff <= 0){
+      document.getElementById('timer').innerHTML =
+        '<div class="unit" style="min-width:auto;padding:18px 26px;"><div class="num" style="font-size:1.8rem;">🌻</div><div class="lbl">it\'s today!</div></div>';
+      document.getElementById('cd-message').textContent = "it's date day! go have the best time 💛";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const mins = Math.floor((diff / (1000*60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+</script>
+
+</body>
+</html>
