@@ -384,6 +384,25 @@
   }
 </style>
 </head>
+<audio id="bgMusic" loop>
+    <source src="mp3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+    const music = document.getElementById("bgMusic");
+
+    music.play().catch(() => {
+        document.addEventListener(
+            "click",
+            () => {
+                music.play();
+            },
+            { once: true }
+        );
+    });
+});
+</script>
 <body>
 
 <svg class="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -421,7 +440,7 @@
       <p class="eyebrow">happy</p>
       <h1 class="title">Girlfriend's Day</h1>
       <p class="hero-sub">a whole page just for my favourite person — full of sunflowers,<br>pasta cravings, and that dreamy look in your eyes I never get tired of.</p>
-      <div class="divider"><span class="line"></span>🌻<span class="line"></span></div>
+      <div class="divider"><span class="line"></span>Click anywhere to listen to song🌻<span class="line"></span></div>
     </div>
   </div>
 
@@ -436,6 +455,7 @@
     <p class="note-heading">a little note for you,</p>
     <p class="note-body">
       Hi you. Yes, you — the one with the dreamiest eyes I've ever gotten lost in.
+      Yes, you—the one with those irresistibly soft, pulpy lips, the same lips I'll never mind stealing a kiss from… or wiping the lip gloss off afterward.
       I just wanted to make you something small to say how much you mean to me.
       You're my favourite person to annoy, my favourite person to talk to about nothing,
       and somehow still my favourite person after all this time. You're sunshine wrapped
